@@ -1,0 +1,25 @@
+#app {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.app-js {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 800px !important;
+  height: 500px  !important;
+  color: red;
+  -webkit-box-shadow: 12px 12px 70px -12px rgba(0, 0, 0, 0.21);
+  box-shadow: 12px 12px 70px -12px rgba(0, 0, 0, 0.21);
+  border-radius: 11px 11px 11px 11px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
