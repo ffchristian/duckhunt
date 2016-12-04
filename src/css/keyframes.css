@@ -1,0 +1,251 @@
+/* Animaciones */
+@-webkit-keyframes pato1 {
+  20% {
+    left: 30%;
+  }
+  60% {
+    left: 10%;
+  }
+  100% {
+    left: 40%;
+    bottom: 110%;
+  }
+}
+
+@-moz-keyframes pato1 {
+  20% {
+    left: 30%;
+  }
+  60% {
+    left: 10%;
+  }
+  100% {
+    left: 40%;
+    bottom: 110%;
+  }
+}
+
+@-o-keyframes pato1 {
+  20% {
+    left: 30%;
+  }
+  60% {
+    left: 10%;
+  }
+  100% {
+    left: 40%;
+    bottom: 110%;
+  }
+}
+
+@keyframes pato1 {
+  20% {
+    left: 30%;
+  }
+  60% {
+    left: 10%;
+  }
+  100% {
+    left: 40%;
+    bottom: 110%;
+  }
+}
+
+@-webkit-keyframes pato2 {
+  30% {
+    left: 10%;
+  }
+  70% {
+    left: 50%;
+  }
+  100% {
+    left: 70%;
+    bottom: 110%;
+  }
+}
+
+@-moz-keyframes pato2 {
+  30% {
+    left: 10%;
+  }
+  70% {
+    left: 50%;
+  }
+  100% {
+    left: 70%;
+    bottom: 110%;
+  }
+}
+
+@-o-keyframes pato2 {
+  30% {
+    left: 10%;
+  }
+  70% {
+    left: 50%;
+  }
+  100% {
+    left: 70%;
+    bottom: 110%;
+  }
+}
+
+@keyframes pato2 {
+  30% {
+    left: 10%;
+  }
+  70% {
+    left: 50%;
+  }
+  100% {
+    left: 70%;
+    bottom: 110%;
+  }
+}
+
+@-webkit-keyframes pato3 {
+  20% {
+    left: 70%;
+  }
+  40% {
+    left: 30%;
+  }
+  80% {
+    left: 50%;
+  }
+  100% {
+    left: 70%;
+    bottom: 110%;
+  }
+}
+
+@-moz-keyframes pato3 {
+  20% {
+    left: 70%;
+  }
+  40% {
+    left: 30%;
+  }
+  80% {
+    left: 50%;
+  }
+  100% {
+    left: 70%;
+    bottom: 110%;
+  }
+}
+
+@-o-keyframes pato3 {
+  20% {
+    left: 70%;
+  }
+  40% {
+    left: 30%;
+  }
+  80% {
+    left: 50%;
+  }
+  100% {
+    left: 70%;
+    bottom: 110%;
+  }
+}
+
+@keyframes pato3 {
+  20% {
+    left: 70%;
+  }
+  40% {
+    left: 30%;
+  }
+  80% {
+    left: 50%;
+  }
+  100% {
+    left: 70%;
+    bottom: 110%;
+  }
+}
+
+@-webkit-keyframes pato4 {
+  20% {
+    left: 90%;
+  }
+  50% {
+    left: 70%;
+  }
+  100% {
+    left: 10%;
+    bottom: 110%;
+  }
+}
+
+@-moz-keyframes pato4 {
+  20% {
+    left: 90%;
+  }
+  50% {
+    left: 70%;
+  }
+  100% {
+    left: 10%;
+    bottom: 110%;
+  }
+}
+
+@-o-keyframes pato4 {
+  20% {
+    left: 90%;
+  }
+  50% {
+    left: 70%;
+  }
+  100% {
+    left: 10%;
+    bottom: 110%;
+  }
+}
+
+@keyframes pato4 {
+  20% {
+    left: 90%;
+  }
+  50% {
+    left: 70%;
+  }
+  100% {
+    left: 10%;
+    bottom: 110%;
+  }
+}
+
+/*
+   @include animation('muevemapa 10s 0s infinite linear alternate both');
+  cubic-bezier(.01,.97,.71,1)
+  animation-name
+  animation-duration
+  animation-timing-function
+  linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n)|initial|inherit;
+  animation-delay
+  animation-iteration-count
+  number|infinite|initial|inherit;
+  animation-direction
+  normal|reverse|alternate|alternate-reverse|initial|inherit;
+  animation-fill-mode
+  none|forwards|backwards|both|initial|inherit;
+  animation-play-state
+  paused|running|initial|inherit;
+
+  -webkit-filter:
+  http://html5-demos.appspot.com/static/css/filters/index.html
+  blur(4px)
+  brightness(0.8)
+  contrast(0.6)
+  drop-shadow(24px 24px 20px black)
+  grayscale(0.2)
+  invert(1)
+  opacity(0.4)
+  saturate(3.1)
+  sepia(1);
+
+*/

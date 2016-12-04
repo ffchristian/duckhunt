@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/* 
+font-family: 'Bungee', cursive;
+font-family: 'Passion One', cursive;
+font-family: 'Share Tech Mono', monospace;
+ */
 * {
   margin: 0px;
   padding: 0px;
@@ -10,12 +15,17 @@
 html, body {
   width: 100%;
   height: 100%;
+  font-size: 12px;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+.fuente1 {
+  font-family: 'Share Tech Mono', monospace;
 }
 
 /* Configuración básica del viewport */
@@ -32,10 +42,9 @@ body {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  position: relative;
 }
 
-.app-js {
+#app-js {
   border: 1px solid rgba(0, 0, 0, 0.1);
   width: 1100px !important;
   height: 700px  !important;
@@ -88,7 +97,7 @@ body {
   cursor: pointer;
 }
 
-/* Duck hunt */
+/* Duck hunt - escenario */
 #duckHunt {
   display: none;
 }
@@ -123,10 +132,6 @@ body {
   margin-left: -70px;
 }
 
-#splashpage, #niveles {
-  display: none;
-}
-
 #ducksScore {
   width: 500px;
   height: 50px;
@@ -150,6 +155,333 @@ body {
   right: 20px;
   border-radius: 11px 11px 11px 11px;
   border: 1px solid #fead71;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 2.5em;
+  padding: 8px;
+}
+
+#trigger {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  z-index: 111001;
+  border-radius: 50%;
+}
+
+/* Importar animaciones */
+/* Animaciones */
+@-webkit-keyframes pato1 {
+  20% {
+    left: 30%;
+  }
+  60% {
+    left: 10%;
+  }
+  100% {
+    left: 40%;
+    bottom: 110%;
+  }
+}
+
+@-moz-keyframes pato1 {
+  20% {
+    left: 30%;
+  }
+  60% {
+    left: 10%;
+  }
+  100% {
+    left: 40%;
+    bottom: 110%;
+  }
+}
+
+@-o-keyframes pato1 {
+  20% {
+    left: 30%;
+  }
+  60% {
+    left: 10%;
+  }
+  100% {
+    left: 40%;
+    bottom: 110%;
+  }
+}
+
+@keyframes pato1 {
+  20% {
+    left: 30%;
+  }
+  60% {
+    left: 10%;
+  }
+  100% {
+    left: 40%;
+    bottom: 110%;
+  }
+}
+
+@-webkit-keyframes pato2 {
+  30% {
+    left: 10%;
+  }
+  70% {
+    left: 50%;
+  }
+  100% {
+    left: 70%;
+    bottom: 110%;
+  }
+}
+
+@-moz-keyframes pato2 {
+  30% {
+    left: 10%;
+  }
+  70% {
+    left: 50%;
+  }
+  100% {
+    left: 70%;
+    bottom: 110%;
+  }
+}
+
+@-o-keyframes pato2 {
+  30% {
+    left: 10%;
+  }
+  70% {
+    left: 50%;
+  }
+  100% {
+    left: 70%;
+    bottom: 110%;
+  }
+}
+
+@keyframes pato2 {
+  30% {
+    left: 10%;
+  }
+  70% {
+    left: 50%;
+  }
+  100% {
+    left: 70%;
+    bottom: 110%;
+  }
+}
+
+@-webkit-keyframes pato3 {
+  20% {
+    left: 70%;
+  }
+  40% {
+    left: 30%;
+  }
+  80% {
+    left: 50%;
+  }
+  100% {
+    left: 70%;
+    bottom: 110%;
+  }
+}
+
+@-moz-keyframes pato3 {
+  20% {
+    left: 70%;
+  }
+  40% {
+    left: 30%;
+  }
+  80% {
+    left: 50%;
+  }
+  100% {
+    left: 70%;
+    bottom: 110%;
+  }
+}
+
+@-o-keyframes pato3 {
+  20% {
+    left: 70%;
+  }
+  40% {
+    left: 30%;
+  }
+  80% {
+    left: 50%;
+  }
+  100% {
+    left: 70%;
+    bottom: 110%;
+  }
+}
+
+@keyframes pato3 {
+  20% {
+    left: 70%;
+  }
+  40% {
+    left: 30%;
+  }
+  80% {
+    left: 50%;
+  }
+  100% {
+    left: 70%;
+    bottom: 110%;
+  }
+}
+
+@-webkit-keyframes pato4 {
+  20% {
+    left: 90%;
+  }
+  50% {
+    left: 70%;
+  }
+  100% {
+    left: 10%;
+    bottom: 110%;
+  }
+}
+
+@-moz-keyframes pato4 {
+  20% {
+    left: 90%;
+  }
+  50% {
+    left: 70%;
+  }
+  100% {
+    left: 10%;
+    bottom: 110%;
+  }
+}
+
+@-o-keyframes pato4 {
+  20% {
+    left: 90%;
+  }
+  50% {
+    left: 70%;
+  }
+  100% {
+    left: 10%;
+    bottom: 110%;
+  }
+}
+
+@keyframes pato4 {
+  20% {
+    left: 90%;
+  }
+  50% {
+    left: 70%;
+  }
+  100% {
+    left: 10%;
+    bottom: 110%;
+  }
+}
+
+/*
+   @include animation('muevemapa 10s 0s infinite linear alternate both');
+  cubic-bezier(.01,.97,.71,1)
+  animation-name
+  animation-duration
+  animation-timing-function
+  linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n)|initial|inherit;
+  animation-delay
+  animation-iteration-count
+  number|infinite|initial|inherit;
+  animation-direction
+  normal|reverse|alternate|alternate-reverse|initial|inherit;
+  animation-fill-mode
+  none|forwards|backwards|both|initial|inherit;
+  animation-play-state
+  paused|running|initial|inherit;
+
+  -webkit-filter:
+  http://html5-demos.appspot.com/static/css/filters/index.html
+  blur(4px)
+  brightness(0.8)
+  contrast(0.6)
+  drop-shadow(24px 24px 20px black)
+  grayscale(0.2)
+  invert(1)
+  opacity(0.4)
+  saturate(3.1)
+  sepia(1);
+
+*/
+/* Patos */
+#pato1 {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  bottom: 100px;
+  z-index: 11001;
+  left: 10%;
+  -webkit-animation: pato1 8s 0s infinite linear normal both;
+  -moz-animation: pato1 8s 0s infinite linear normal both;
+  -o-animation: pato1 8s 0s infinite linear normal both;
+  animation: pato1 8s 0s infinite linear normal both;
+}
+
+#pato2 {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  bottom: 100px;
+  z-index: 11002;
+  left: 30%;
+  -webkit-animation: pato2 7s 0s infinite linear normal both;
+  -moz-animation: pato2 7s 0s infinite linear normal both;
+  -o-animation: pato2 7s 0s infinite linear normal both;
+  animation: pato2 7s 0s infinite linear normal both;
+}
+
+#pato3 {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  bottom: 100px;
+  z-index: 11003;
+  left: 60%;
+  -webkit-animation: pato3 6s 0s infinite linear normal both;
+  -moz-animation: pato3 6s 0s infinite linear normal both;
+  -o-animation: pato3 6s 0s infinite linear normal both;
+  animation: pato3 6s 0s infinite linear normal both;
+}
+
+#pato4 {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: absolute;
+  bottom: 100px;
+  z-index: 11003;
+  left: 80%;
+  -webkit-animation: pato4 8s 0s infinite linear normal both;
+  -moz-animation: pato4 8s 0s infinite linear normal both;
+  -o-animation: pato4 8s 0s infinite linear normal both;
+  animation: pato4 8s 0s infinite linear normal both;
+}
+
+/* Debug */
+#splashpage, #niveles {
+  display: none;
 }
 
 #duckHunt {

@@ -1,3 +1,10 @@
+/* 
+font-family: 'Bungee', cursive;
+font-family: 'Passion One', cursive;
+font-family: 'Share Tech Mono', monospace;
+ */
+
+
 *{
 	margin: 0px;
 	padding: 0px;
@@ -7,11 +14,15 @@
 html,body{
 	width: 100%;
 	height: 100%;
+	font-size:12px;
 }
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+.fuente1{
+	font-family: 'Share Tech Mono', monospace;
 }
 /* Configuración básica del viewport */
 #app{
@@ -21,9 +32,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
-.app-js{
+#app-js{
 	border: 1px solid rgba(0,0,0,.1);;
 	width:1100px !important;
 	height:700px  !important;
@@ -71,7 +81,7 @@ body {
 	text-align:center;
 	cursor: pointer;
 }
-/* Duck hunt */
+/* Duck hunt - escenario */
 #duckHunt{
 	display:none;
 }
@@ -103,10 +113,7 @@ body {
 	left:50%;
 	margin-left:-70px;
 }
-#splashpage,#niveles{
-	display:none;
 
-}
 #ducksScore{
 	width:500px;
 	height:50px;
@@ -129,6 +136,57 @@ body {
 	right:20px;
 	border-radius: 11px 11px 11px 11px;
 	border: 1px solid #fead71;
+	color:rgba(255,255,255,.8);
+	text-align:center;
+	font-size:2.5em;
+	padding:8px;
+}
+#trigger{
+	width:70px;
+	height:70px;
+	background-color:rgba(255,255,255,.5);
+	position:absolute;
+	z-index:111001;
+	border-radius: 50%;
+}
+/* Importar animaciones */
+@import 'keyframes.scss';
+/* Patos */
+
+@mixin unPato($z){
+	width:50px;
+	height:50px;
+	background-color:red;
+	position:absolute;
+	bottom:100px;
+	z-index:$z;
+}
+
+#pato1{
+	@include unPato(11001);
+	left:10%;
+	@include animation('pato1 8s 0s infinite linear normal both');
+}
+#pato2{
+	@include unPato(11002);
+	left:30%;
+	@include animation('pato2 7s 0s infinite linear normal both');
+}
+#pato3{
+	@include unPato(11003);
+	left:60%;
+	@include animation('pato3 6s 0s infinite linear normal both');
+}
+#pato4{
+	@include unPato(11003);
+	left:80%;
+	@include animation('pato4 8s 0s infinite linear normal both');
+}
+/* Debug */
+
+#splashpage,#niveles{
+	display:none;
+
 }
 #duckHunt{
 	display:block;
