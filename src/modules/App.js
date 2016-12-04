@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
+import startpage from '../assets/duck-hunt1.png';
 class App extends Component {
-//import logo from './assets/logo.svg'
+  constructor(props) {
+  	super(props);
+  	this.state = {
+  	  disparo: false
+  	};
+  }
+  componentDidMount(){
+    $('#entrar').on('click',function(e){
+      $('#splashpage').hide();
+      $('#niveles').show();
+    })
 
-constructor(props) {
-	super(props);
-	this.state = {
-	  disparo: false
-	};
-}
+  }
+
+
+
+
 /*
-componentDidMount(){
-
-}
 
 $(document).on( "mouseup", function( event ) {
 
@@ -21,14 +28,17 @@ $(document).on( "mouseup", function( event ) {
 arma(){
 
 }
-*/
+ */
+
 //{this.function.bind(this)}
 
 
   render() {
     return (
       <div className="app-js">
-      Personajes, armas, experiencia
+            <div id="splashpage"><img src={startpage} /><div id="entrar">Entrar</div></div>
+            <div id="niveles">Selector de nivel</div>
+      			<div id="arma"></div>
       </div>
     );
   }
