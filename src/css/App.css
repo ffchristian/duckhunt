@@ -117,7 +117,7 @@ body {
   height: 150px;
   bottom: 0px;
   position: absolute;
-  z-index: 1020;
+  z-index: 110011;
   background-color: #a47049;
 }
 
@@ -126,8 +126,7 @@ body {
   height: 50px;
   background-color: black;
   position: absolute;
-  bottom: 20px;
-  z-index: 10010;
+  bottom: 50px;
   left: 50%;
   margin-left: -250px;
   border-radius: 11px 11px 11px 11px;
@@ -139,8 +138,7 @@ body {
   height: 50px;
   background-color: black;
   position: absolute;
-  bottom: 20px;
-  z-index: 10011;
+  bottom: 50px;
   right: 20px;
   border-radius: 11px 11px 11px 11px;
   border: 1px solid #fead71;
@@ -434,12 +432,16 @@ body {
 */
 /* Patos */
 #pato1 {
-  width: 50px;
-  height: 50px;
-  background-color: red;
+  width: 100px;
+  height: 100px;
   position: absolute;
-  bottom: 100px;
+  bottom: 30px;
   z-index: 11001;
+  background-image: url(../assets/duck.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
   left: 10%;
 }
 
@@ -452,57 +454,65 @@ body {
 }
 
 #pato2 {
-  width: 50px;
-  height: 50px;
-  background-color: red;
+  width: 100px;
+  height: 100px;
   position: absolute;
-  bottom: 100px;
+  bottom: 30px;
   z-index: 11002;
+  background-image: url(../assets/duck.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   left: 30%;
 }
 
 .pato2Anim {
   opacity: 1;
-  -webkit-animation: pato2 11s 0s infinite linear normal forwards;
-  -moz-animation: pato2 11s 0s infinite linear normal forwards;
-  -o-animation: pato2 11s 0s infinite linear normal forwards;
-  animation: pato2 11s 0s infinite linear normal forwards;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -webkit-animation: pato2 11s 2s infinite linear normal forwards;
+  -moz-animation: pato2 11s 2s infinite linear normal forwards;
+  -o-animation: pato2 11s 2s infinite linear normal forwards;
+  animation: pato2 11s 2s infinite linear normal forwards;
 }
 
 #pato3 {
-  width: 50px;
-  height: 50px;
-  background-color: red;
+  width: 100px;
+  height: 100px;
   position: absolute;
-  bottom: 100px;
+  bottom: 30px;
   z-index: 11003;
+  background-image: url(../assets/duck.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   left: 60%;
 }
 
 .pato3Anim {
   opacity: 1;
-  -webkit-animation: pato3 12s 0s infinite linear normal forwards;
-  -moz-animation: pato3 12s 0s infinite linear normal forwards;
-  -o-animation: pato3 12s 0s infinite linear normal forwards;
-  animation: pato3 12s 0s infinite linear normal forwards;
+  -webkit-animation: pato3 12s 1s infinite linear normal forwards;
+  -moz-animation: pato3 12s 1s infinite linear normal forwards;
+  -o-animation: pato3 12s 1s infinite linear normal forwards;
+  animation: pato3 12s 1s infinite linear normal forwards;
 }
 
 #pato4 {
-  width: 50px;
-  height: 50px;
-  background-color: red;
+  width: 100px;
+  height: 100px;
   position: absolute;
-  bottom: 100px;
+  bottom: 30px;
   z-index: 11003;
+  background-image: url(../assets/duck.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   left: 80%;
 }
 
 .pato4Anim {
   opacity: 1;
-  -webkit-animation: pato4 14s 0s infinite linear normal forwards;
-  -moz-animation: pato4 14s 0s infinite linear normal forwards;
-  -o-animation: pato4 14s 0s infinite linear normal forwards;
-  animation: pato4 14s 0s infinite linear normal forwards;
+  -webkit-animation: pato4 14s 2.4s infinite linear normal forwards;
+  -moz-animation: pato4 14s 2.4s infinite linear normal forwards;
+  -o-animation: pato4 14s 2.4s infinite linear normal forwards;
+  animation: pato4 14s 2.4s infinite linear normal forwards;
 }
 
 #malo1 {
@@ -512,8 +522,7 @@ body {
   z-index: 1002;
   background-color: #fc53d8;
   bottom: 0px;
-  left: 20%;
-  margin-left: -70px;
+  left: 200px;
   visibility: hidden;
 }
 
@@ -525,7 +534,6 @@ body {
   background-color: #fe9e1b;
   bottom: 0px;
   left: 50%;
-  margin-left: -70px;
   visibility: hidden;
 }
 
@@ -537,7 +545,6 @@ body {
   background-color: #443021;
   bottom: 0px;
   left: 80%;
-  margin-left: -70px;
   visibility: hidden;
 }
 

@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import startpage from '../assets/duck-hunt1.png';
+/* Variables iniciales */
+
 var patos = ['pato1','pato2','pato3','pato4','malo1','malo2','malo3'];
 var globalX = 0;
 var globalY = 0;
 var score = 100000;
-var malo1_;
-var malo2_;
-var malo3_;
+var malo1Time;
+var malo1Vidas=4;
+var malo2Vidas=4;
+var malo2Time;
+var malo3Vidas=4;
+var malo3Time;
+var puntos=50;
+
 class App extends Component {
-/* Matar pato y actualizar el score */
+/* Matar patos y enemigos, actualizar el score */
 matar(patoObj,pato){
-    this.setState({score:this.state.score+1});
+    this.setState({score:this.state.score+puntos});
     patoObj.css({left:patoObj.position().left,top:patoObj.position().top});
     patoObj.removeClass('pato'+(Number(pato)+1)+'Anim');
       patoObj.animate({
@@ -25,36 +32,76 @@ matar(patoObj,pato){
 }
 /* Detectar colisiones entre pato y pistola */
 colision(){
+
   var that = this;
     for(var pato in patos){
       var patoObj = $('#'+patos[pato]);
       var trigger = $('#trigger');
-      var rangoX = [Math.round(patoObj.position().left),Math.round(patoObj.position().left+patoObj.width())];
-      var rangoY = [Math.round(patoObj.position().top),Math.round(patoObj.position().top+patoObj.height())];
-      var triggerX = [Math.round(globalX),Math.round(globalX+trigger.width())];
-      var triggerY = [Math.round(globalY),Math.round(globalY+trigger.height())];
+      var rangoX = [patoObj.position().left,patoObj.position().left+patoObj.width()];
+      var rangoY = [patoObj.position().top,patoObj.position().top+patoObj.height()];
+      var triggerX = [globalX,globalX+70];
+      var triggerY = [globalY,globalY+70];
       var colisionar = 0;
-     //console.log(triggerY[0]+" "+triggerY[1]);
-      //console.log(triggerX[0]+" "+triggerX[1]);
-      for(var colX = triggerX[0];colX<triggerX[1]; colX++){
-        if(colX==rangoX[0] || colX==rangoX[1]){
-            colisionar = 1;
-            console.log(colX+' '+rangoX[0]+' '+colX+' '+rangoX[1]);
-             console.log(patos[pato]);
-            break;
-        }
-      }
-      for(var colY = triggerY[0];colY<triggerY[1]; colY++){
-        if(colY==rangoY[0] || colY==rangoY[1]){
-          if(colisionar==1){
-            colisionar = 2;
-           console.log(patos[pato]);
-            that.matar(patoObj,pato);
-            break;
+      /* Localizar contacto en X */
+     var encontradoX=false;
+     
+      for(var buscarX = triggerX[0];buscarX<triggerX[1]; buscarX++){
+          for(var buscarX2 = rangoX[0];buscarX2<rangoX[1]; buscarX2++){
+            if(Math.round(buscarX)==Math.round(buscarX2)){
+               //console.log("bingo X");
+               encontradoX = true;
+               break;
+             }
           }
-        }
+          if(encontradoX){
+             break;
+          }
+       };
 
-      }
+      /* Localizar contacto en X */
+    if(encontradoX){
+     var encontradoY=false;
+      for(var buscarY=triggerY[0];buscarY<triggerY[1]; buscarY++){
+          for(var buscarY2=rangoY[0];buscarY2<rangoY[1]; buscarY2++){
+            if(Math.round(buscarY)==Math.round(buscarY2)){
+               console.log("bingo");
+               encontradoY = true;
+               console.log(patoObj);
+               if(patoObj.attr('id')=='malo1'){
+                if(malo1Vidas){
+                  malo1Vidas--;
+                }else{
+                  clearInterval(malo1Time);
+                  that.matar(patoObj,pato);
+                }
+               }else if(patoObj.attr('id')=='malo2'){
+                 if(malo2Vidas){
+                  malo2Vidas--;
+                }else{
+                  clearInterval(malo2Time);
+                  that.matar(patoObj,pato);
+                }
+
+               }else if(patoObj.attr('id')=='malo3'){
+                 if(malo3Vidas){
+                  malo3Vidas--;
+                }else{
+                  clearInterval(malo3Time);
+                  that.matar(patoObj,pato);
+                }
+               }else{
+                that.matar(patoObj,pato);
+               }
+               break;
+             }
+          }
+          if(encontradoY){
+             break;
+          }
+       };
+      } 
+      /* Comment */
+      
     }
 }
 /* Estados iniciales */
@@ -84,8 +131,8 @@ colision(){
       var add = 35;
       var xAdd = $('#app-js').position().left;
        var yAdd = $('#app-js').position().top;
-       globalX = event.clientX-xAdd;
-       globalY = event.clientY-yAdd;
+       globalX = event.clientX-xAdd-(add);
+       globalY = event.clientY-yAdd-(add);
       $("#trigger").css({left:globalX,top:globalY});
     }).click(function(){
       that.colision();
@@ -93,25 +140,25 @@ colision(){
     /* Cargar malos */
     setTimeout(function(){ 
         $("#malo1").css('visibility','visible');
-        malo1_ = setInterval(function(){
+         malo1Time = setInterval(function(){
           that.setState({score:that.state.score-1});
          }, 50);
 
-       }, 4000);
+       }, 1000);
 
       setTimeout(function(){ 
        $("#malo2").css('visibility','visible');
-        malo2_ = setInterval(function(){
+        malo2Time = setInterval(function(){
           that.setState({score:that.state.score-1});
          }, 50);
-       }, 7000);
+       }, 2000);
 
       setTimeout(function(){ 
         $("#malo3").css('visibility','visible');
-        malo3_ = setInterval(function(){
+        malo3Time = setInterval(function(){
           that.setState({score:that.state.score-1});
          }, 50);
-       }, 11000);
+       }, 3000);
     
 
 
@@ -124,10 +171,13 @@ colision(){
             <div id="niveles">Selector de nivel<div id="seleccionNivel">Primer nivel</div></div>
             <div id="duckHunt">
               <div id="trigger"></div>
-              <div id="ducksScore"></div>
-              <div id="globalScore" className="fuente1">{this.state.score}</div>
+             
+              
               <div id="cieloAzul"></div>
-              <div id="pasto"></div>
+              <div id="pasto">
+                   <div id="ducksScore"></div>
+                   <div id="globalScore" className="fuente1">{this.state.score}</div>
+              </div>
               <div className="patos">
                 <div id="malo1"></div>
                  <div id="malo2"></div>
