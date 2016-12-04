@@ -117,19 +117,8 @@ body {
   height: 150px;
   bottom: 0px;
   position: absolute;
-  z-index: 1003;
+  z-index: 1020;
   background-color: #a47049;
-}
-
-#perro {
-  width: 140px;
-  height: 280px;
-  position: absolute;
-  z-index: 1002;
-  background-color: #443021;
-  bottom: 0px;
-  left: 50%;
-  margin-left: -70px;
 }
 
 #ducksScore {
@@ -392,22 +381,43 @@ body {
   }
 }
 
+@-webkit-keyframes matar {
+  100% {
+    opacity: .1;
+  }
+}
+
+@-moz-keyframes matar {
+  100% {
+    opacity: .1;
+  }
+}
+
+@-o-keyframes matar {
+  100% {
+    opacity: .1;
+  }
+}
+
+@keyframes matar {
+  100% {
+    opacity: .1;
+  }
+}
+
 /*
    @include animation('muevemapa 10s 0s infinite linear alternate both');
   cubic-bezier(.01,.97,.71,1)
   animation-name
   animation-duration
   animation-timing-function
+
   linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n)|initial|inherit;
-  animation-delay
-  animation-iteration-count
-  number|infinite|initial|inherit;
-  animation-direction
-  normal|reverse|alternate|alternate-reverse|initial|inherit;
-  animation-fill-mode
-  none|forwards|backwards|both|initial|inherit;
-  animation-play-state
-  paused|running|initial|inherit;
+  animation-delay:
+  animation-iteration-count:number|infinite|initial|inherit;
+  animation-direction:normal|reverse|alternate|alternate-reverse|initial|inherit;
+  animation-fill-mode:none|forwards|backwards|both|initial|inherit;
+  animation-play-state:paused|running|initial|inherit;
 
   -webkit-filter:
   http://html5-demos.appspot.com/static/css/filters/index.html
@@ -431,10 +441,14 @@ body {
   bottom: 100px;
   z-index: 11001;
   left: 10%;
-  -webkit-animation: pato1 8s 0s infinite linear normal both;
-  -moz-animation: pato1 8s 0s infinite linear normal both;
-  -o-animation: pato1 8s 0s infinite linear normal both;
-  animation: pato1 8s 0s infinite linear normal both;
+}
+
+.pato1Anim {
+  opacity: 1;
+  -webkit-animation: pato1 10s 0s infinite linear normal forwards;
+  -moz-animation: pato1 10s 0s infinite linear normal forwards;
+  -o-animation: pato1 10s 0s infinite linear normal forwards;
+  animation: pato1 10s 0s infinite linear normal forwards;
 }
 
 #pato2 {
@@ -445,10 +459,14 @@ body {
   bottom: 100px;
   z-index: 11002;
   left: 30%;
-  -webkit-animation: pato2 7s 0s infinite linear normal both;
-  -moz-animation: pato2 7s 0s infinite linear normal both;
-  -o-animation: pato2 7s 0s infinite linear normal both;
-  animation: pato2 7s 0s infinite linear normal both;
+}
+
+.pato2Anim {
+  opacity: 1;
+  -webkit-animation: pato2 11s 0s infinite linear normal forwards;
+  -moz-animation: pato2 11s 0s infinite linear normal forwards;
+  -o-animation: pato2 11s 0s infinite linear normal forwards;
+  animation: pato2 11s 0s infinite linear normal forwards;
 }
 
 #pato3 {
@@ -459,10 +477,14 @@ body {
   bottom: 100px;
   z-index: 11003;
   left: 60%;
-  -webkit-animation: pato3 6s 0s infinite linear normal both;
-  -moz-animation: pato3 6s 0s infinite linear normal both;
-  -o-animation: pato3 6s 0s infinite linear normal both;
-  animation: pato3 6s 0s infinite linear normal both;
+}
+
+.pato3Anim {
+  opacity: 1;
+  -webkit-animation: pato3 12s 0s infinite linear normal forwards;
+  -moz-animation: pato3 12s 0s infinite linear normal forwards;
+  -o-animation: pato3 12s 0s infinite linear normal forwards;
+  animation: pato3 12s 0s infinite linear normal forwards;
 }
 
 #pato4 {
@@ -473,10 +495,50 @@ body {
   bottom: 100px;
   z-index: 11003;
   left: 80%;
-  -webkit-animation: pato4 8s 0s infinite linear normal both;
-  -moz-animation: pato4 8s 0s infinite linear normal both;
-  -o-animation: pato4 8s 0s infinite linear normal both;
-  animation: pato4 8s 0s infinite linear normal both;
+}
+
+.pato4Anim {
+  opacity: 1;
+  -webkit-animation: pato4 14s 0s infinite linear normal forwards;
+  -moz-animation: pato4 14s 0s infinite linear normal forwards;
+  -o-animation: pato4 14s 0s infinite linear normal forwards;
+  animation: pato4 14s 0s infinite linear normal forwards;
+}
+
+#malo1 {
+  width: 140px;
+  height: 280px;
+  position: absolute;
+  z-index: 1002;
+  background-color: #fc53d8;
+  bottom: 0px;
+  left: 20%;
+  margin-left: -70px;
+  visibility: hidden;
+}
+
+#malo2 {
+  width: 140px;
+  height: 280px;
+  position: absolute;
+  z-index: 1003;
+  background-color: #fe9e1b;
+  bottom: 0px;
+  left: 50%;
+  margin-left: -70px;
+  visibility: hidden;
+}
+
+#malo3 {
+  width: 140px;
+  height: 280px;
+  position: absolute;
+  z-index: 1004;
+  background-color: #443021;
+  bottom: 0px;
+  left: 80%;
+  margin-left: -70px;
+  visibility: hidden;
 }
 
 /* Debug */

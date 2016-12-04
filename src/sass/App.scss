@@ -99,20 +99,11 @@ body {
 	height:150px;
 	bottom:0px;
 	position:absolute;
-	z-index:1003;
+	z-index:1020;
 	background-color: #a47049;
 
 }
-#perro{
-	width:140px;
-	height:280px;
-	position:absolute;
-	z-index:1002;
-	background-color: #443021;
-	bottom:0px;
-	left:50%;
-	margin-left:-70px;
-}
+
 
 #ducksScore{
 	width:500px;
@@ -165,22 +156,72 @@ body {
 #pato1{
 	@include unPato(11001);
 	left:10%;
-	@include animation('pato1 8s 0s infinite linear normal both');
+	
+}
+.pato1Anim{
+	opacity:1;
+	@include animation('pato1 10s 0s infinite linear normal forwards');
 }
 #pato2{
 	@include unPato(11002);
 	left:30%;
-	@include animation('pato2 7s 0s infinite linear normal both');
+	
+}
+.pato2Anim{
+	opacity:1;
+	@include animation('pato2 11s 0s infinite linear normal forwards');
 }
 #pato3{
 	@include unPato(11003);
 	left:60%;
-	@include animation('pato3 6s 0s infinite linear normal both');
+}
+.pato3Anim{
+	opacity:1;
+	@include animation('pato3 12s 0s infinite linear normal forwards');
 }
 #pato4{
 	@include unPato(11003);
 	left:80%;
-	@include animation('pato4 8s 0s infinite linear normal both');
+	
+}
+.pato4Anim{
+	opacity:1;
+	@include animation('pato4 14s 0s infinite linear normal forwards');
+}
+#malo1{
+	width:140px;
+	height:280px;
+	position:absolute;
+	z-index:1002;
+	background-color: #fc53d8;
+	bottom:0px;
+	left:20%;
+	margin-left:-70px;
+	visibility: hidden;
+	
+}
+#malo2{
+	width:140px;
+	height:280px;
+	position:absolute;
+	z-index:1003;
+	background-color: #fe9e1b;
+	bottom:0px;
+	left:50%;
+	margin-left:-70px;
+	visibility: hidden;
+	
+}
+#malo3{
+	width:140px;
+	height:280px;
+	position:absolute;
+	z-index:1004;
+	background-color: #443021;
+	bottom:0px;
+	left:80%;
+	margin-left:-70px;
+	visibility: hidden;
 }
 /* Debug */
 
