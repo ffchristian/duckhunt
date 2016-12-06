@@ -6,12 +6,12 @@ var patos = ['pato1', 'pato2', 'pato3', 'pato4'];
 var globalX = 0;
 var globalY = 0;
 var score = 0;
-var malo1Time;
-var malo1Vidas = 4;
-var malo2Vidas = 4;
-var malo2Time;
-var malo3Vidas = 4;
-var malo3Time;
+//var malo1Time;
+//var malo1Vidas = 4;
+//var malo2Vidas = 4;
+//var malo2Time;
+//var malo3Vidas = 4;
+//var malo3Time;
 var puntos = 50;
 var audioMuere;
 audioMuere = new Audio('assets/audio-muere.mp3');
@@ -200,19 +200,22 @@ class App extends Component {
         }
         //{this.function.bind(this)}
     render() {
-        return ( < div id = "app-js" >
-            < div id = "splashpage" > < img alt = "splash"
-            src = { screenPng }
-            /><div id="entrar">Entrar</div > < /div> < div id = "niveles" > Selector de nivel < div id = "seleccionNivel" > Primer nivel < /div></div >
-            < div id = "duckHunt" >
-            < div id = "trigger" > < /div> < div id = "cieloAzul" > < /div> < div id = "pasto" >
-            < div id = "ducksScore" > < /div> < div id = "globalScore"
-            className = "fuente1" > { this.state.score } < /div> < /div> < div className = "patos" >
-            < div id = "malo1" > < /div> < div id = "malo2" > < /div> < div id = "malo3" > < /div> < div id = "pato1"
-            className = "pato1Anim" > < /div> < div id = "pato2"
-            className = "pato2Anim" > < /div> < div id = "pato3"
-            className = "pato3Anim" > < /div> < div id = "pato4"
-            className = "pato4Anim" > < /div> < /div> < /div> < div id = "arma" > < /div> < /div>
+        return ( 
+            <div id="app-js">
+                <div id="splashpage"><img alt="splash"src={ screenPng } />
+                <div id="entrar">Entrar</div>
+            </div> 
+            <div id="niveles"> Selector de nivel <div id="seleccionNivel"> Primer nivel </div></div>
+            <div id="duckHunt">©
+            <div id="trigger"> </div> <div id="cieloAzul"> </div> <div id="pasto">
+            <div id="ducksScore"> </div> <div id="globalScore"
+            className="fuente1"> { this.state.score } </div> </div> < div className="patos">
+            <div id="malo1"> </div> <div id="malo2"> </div> <div id="malo3"> </div> <div id="pato1"
+            className="pato1Anim"> </div> <div id="pato2"
+            className="pato2Anim"> </div> <div id="pato3"
+            className="pato3Anim"> </div> <div id="pato4"
+            className="pato4Anim"> </div> </div> </div> <div id="arma"> </div> 
+            </div>
         );
     }
 }
