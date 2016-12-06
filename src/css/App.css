@@ -60,6 +60,7 @@ body {
 #splashpage {
   width: 100%;
   background-size: 100% auto;
+  cursor: pointer;
 }
 
 #splashpage img {
@@ -77,6 +78,7 @@ body {
   margin-left: -100px;
   text-align: center;
   cursor: pointer;
+  display: none;
 }
 
 /* Selección de niveles */
@@ -114,11 +116,11 @@ body {
 
 #pasto {
   width: 100%;
-  height: 150px;
+  height: 100%;
   bottom: 0px;
   position: absolute;
   z-index: 110011;
-  background-color: #a47049;
+  background-image: url("../assets/background.png");
 }
 
 #ducksScore {
@@ -131,21 +133,22 @@ body {
   margin-left: -250px;
   border-radius: 11px 11px 11px 11px;
   border: 1px solid #fead71;
+  display: none;
 }
 
 #globalScore {
-  width: 200px;
-  height: 50px;
+  width: 150px;
+  height: 40px;
   background-color: black;
   position: absolute;
-  bottom: 50px;
+  bottom: 10px;
   right: 20px;
   border-radius: 11px 11px 11px 11px;
-  border: 1px solid #fead71;
-  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #aaff08;
+  color: #aaff08;
   text-align: center;
   font-size: 2.5em;
-  padding: 8px;
+  padding: 2px;
 }
 
 #trigger {
@@ -155,6 +158,8 @@ body {
   position: absolute;
   z-index: 111001;
   border-radius: 50%;
+  -webkit-filter: brightness(1.5);
+  filter: brightness(1.5);
 }
 
 /* Importar animaciones */
@@ -163,8 +168,11 @@ body {
   20% {
     left: 30%;
   }
-  60% {
+  40% {
     left: 10%;
+  }
+  80% {
+    left: 77%;
   }
   100% {
     left: 40%;
@@ -176,8 +184,11 @@ body {
   20% {
     left: 30%;
   }
-  60% {
+  40% {
     left: 10%;
+  }
+  80% {
+    left: 77%;
   }
   100% {
     left: 40%;
@@ -189,8 +200,11 @@ body {
   20% {
     left: 30%;
   }
-  60% {
+  40% {
     left: 10%;
+  }
+  80% {
+    left: 77%;
   }
   100% {
     left: 40%;
@@ -202,8 +216,11 @@ body {
   20% {
     left: 30%;
   }
-  60% {
+  40% {
     left: 10%;
+  }
+  80% {
+    left: 77%;
   }
   100% {
     left: 40%;
@@ -442,7 +459,7 @@ body {
   background-repeat: no-repeat;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  left: 10%;
+  left: 5%;
 }
 
 .pato1Anim {
@@ -469,10 +486,11 @@ body {
   opacity: 1;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  -webkit-animation: pato2 11s 2s infinite linear normal forwards;
-  -moz-animation: pato2 11s 2s infinite linear normal forwards;
-  -o-animation: pato2 11s 2s infinite linear normal forwards;
-  animation: pato2 11s 2s infinite linear normal forwards;
+  left: 50%;
+  -webkit-animation: pato2 6s 3s infinite linear normal forwards;
+  -moz-animation: pato2 6s 3s infinite linear normal forwards;
+  -o-animation: pato2 6s 3s infinite linear normal forwards;
+  animation: pato2 6s 3s infinite linear normal forwards;
 }
 
 #pato3 {
@@ -489,10 +507,10 @@ body {
 
 .pato3Anim {
   opacity: 1;
-  -webkit-animation: pato3 12s 1s infinite linear normal forwards;
-  -moz-animation: pato3 12s 1s infinite linear normal forwards;
-  -o-animation: pato3 12s 1s infinite linear normal forwards;
-  animation: pato3 12s 1s infinite linear normal forwards;
+  -webkit-animation: pato3 12s 6s infinite linear normal forwards;
+  -moz-animation: pato3 12s 6s infinite linear normal forwards;
+  -o-animation: pato3 12s 6s infinite linear normal forwards;
+  animation: pato3 12s 6s infinite linear normal forwards;
 }
 
 #pato4 {
@@ -509,10 +527,10 @@ body {
 
 .pato4Anim {
   opacity: 1;
-  -webkit-animation: pato4 14s 2.4s infinite linear normal forwards;
-  -moz-animation: pato4 14s 2.4s infinite linear normal forwards;
-  -o-animation: pato4 14s 2.4s infinite linear normal forwards;
-  animation: pato4 14s 2.4s infinite linear normal forwards;
+  -webkit-animation: pato4 4s 9s infinite linear normal forwards;
+  -moz-animation: pato4 4s 9s infinite linear normal forwards;
+  -o-animation: pato4 4s 9s infinite linear normal forwards;
+  animation: pato4 4s 9s infinite linear normal forwards;
 }
 
 #malo1 {
@@ -520,10 +538,12 @@ body {
   height: 280px;
   position: absolute;
   z-index: 1002;
-  background-color: #fc53d8;
   bottom: 0px;
   left: 200px;
   visibility: hidden;
+  background-image: url(../assets/dog.gif);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 #malo2 {
@@ -531,10 +551,11 @@ body {
   height: 280px;
   position: absolute;
   z-index: 1003;
-  background-color: #fe9e1b;
-  bottom: 0px;
-  left: 50%;
-  visibility: hidden;
+  bottom: -200px;
+  left: 45%;
+  background-image: url(../assets/dog.gif);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 #malo3 {
@@ -542,21 +563,24 @@ body {
   height: 280px;
   position: absolute;
   z-index: 1004;
-  background-color: #443021;
   bottom: 0px;
   left: 80%;
   visibility: hidden;
+  background-image: url(../assets/dog.gif);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 /* Debug */
-#splashpage, #niveles {
-  display: none;
-}
+/*
+#splashpage,#niveles{
+	display:none;
 
-#duckHunt {
-  display: block;
 }
-
+#duckHunt{
+	display:block;
+}
+*/
 #arma {
   width: 40px;
   height: 40px;
