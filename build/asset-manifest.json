@@ -1,9 +1,10 @@
 {
-  "main.css": "static/css/main.376066ed.css",
-  "main.css.map": "static/css/main.376066ed.css.map",
-  "main.js": "static/js/main.31467594.js",
-  "main.js.map": "static/js/main.31467594.js.map",
+  "main.css": "static/css/main.7c14ea65.css",
+  "main.css.map": "static/css/main.7c14ea65.css.map",
+  "main.js": "static/js/main.33154e9e.js",
+  "main.js.map": "static/js/main.33154e9e.js.map",
+  "static/media/background.png": "static/media/background.c0396ba5.png",
   "static/media/dog.gif": "static/media/dog.867c7e97.gif",
-  "static/media/duck-hunt1.png": "static/media/duck-hunt1.4f7d3a4d.png",
-  "static/media/duck.png": "static/media/duck.d2c35645.png"
+  "static/media/duck.png": "static/media/duck.d2c35645.png",
+  "static/media/screen.png": "static/media/screen.7134d2e3.png"
 }
